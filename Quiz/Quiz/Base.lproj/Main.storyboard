@@ -17,29 +17,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EQ-jc-D54">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EQ-jc-D54">
                                 <rect key="frame" x="288" y="28" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGu-ZV-lns">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGu-ZV-lns">
                                 <rect key="frame" x="251" y="57" width="98" height="30"/>
                                 <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pN1-Qu-igk"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri5-GU-SEe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri5-GU-SEe">
                                 <rect key="frame" x="254" y="323" width="93" height="30"/>
                                 <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDw-MM-9Wv"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrE-lM-6Te">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrE-lM-6Te">
                                 <rect key="frame" x="288" y="289" width="25" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ri5-GU-SEe" firstAttribute="centerX" secondItem="JGu-ZV-lns" secondAttribute="centerX" id="20o-Fc-iat"/>
+                            <constraint firstItem="4EQ-jc-D54" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GF-nH-xQQ"/>
+                            <constraint firstItem="IrE-lM-6Te" firstAttribute="top" secondItem="JGu-ZV-lns" secondAttribute="bottom" constant="202" id="3p3-bT-9yk"/>
+                            <constraint firstItem="IrE-lM-6Te" firstAttribute="centerX" secondItem="JGu-ZV-lns" secondAttribute="centerX" id="73b-C3-nXS"/>
+                            <constraint firstItem="JGu-ZV-lns" firstAttribute="top" secondItem="4EQ-jc-D54" secondAttribute="bottom" constant="8" id="Ems-l7-dzl"/>
+                            <constraint firstItem="4EQ-jc-D54" firstAttribute="centerX" secondItem="JGu-ZV-lns" secondAttribute="centerX" id="Z2j-Qv-4zw"/>
+                            <constraint firstItem="4EQ-jc-D54" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ehC-Ie-ec7"/>
+                            <constraint firstItem="Ri5-GU-SEe" firstAttribute="top" secondItem="IrE-lM-6Te" secondAttribute="bottom" constant="13" id="wqZ-vU-dR1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="asnwerLabel" destination="IrE-lM-6Te" id="9C6-XH-kkk"/>
+                        <outlet property="questionLabel" destination="4EQ-jc-D54" id="zc9-fG-oaS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
