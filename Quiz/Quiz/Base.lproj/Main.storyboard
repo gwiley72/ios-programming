@@ -57,12 +57,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="asnwerLabel" destination="IrE-lM-6Te" id="9C6-XH-kkk"/>
+                        <outlet property="answerLabel" destination="IrE-lM-6Te" id="dT3-3e-vyv"/>
                         <outlet property="questionLabel" destination="4EQ-jc-D54" id="zc9-fG-oaS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="712" y="588"/>
         </scene>
     </scenes>
 </document>
