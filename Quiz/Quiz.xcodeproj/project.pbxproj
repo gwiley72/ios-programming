@@ -286,6 +286,7 @@
 				F621F8D21D05209B0096DF84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
